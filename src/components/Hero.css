@@ -1,0 +1,122 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://source.unsplash.com/random/1920x1080?traffic');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+              url('https://source.unsplash.com/random/1920x1080?traffic');
+  background-size: cover;
+  background-position: center;
+  animation: scale 20s infinite alternate linear;
+  z-index: -1;
+}
+
+@keyframes scale {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #646cff;
+  animation: fadeIn 1s ease-out 0.3s backwards;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-out 0.6s backwards;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-out 0.9s backwards;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: fadeIn 1s ease-out 1.2s backwards;
+}
+
+.cta-button:hover {
+  background-color: #535bf2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(100, 108, 255, 0.3);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+.hero-logo {
+  width: 250px;
+  height: auto;
+  margin-bottom: 2rem;
+  animation: fadeIn 1s ease-out, float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-logo {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-logo {
+    width: 200px;
+  }
+}
+
+.highlight-x {
+  color: #e64325;
+  text-shadow: 0 0 10px rgba(230, 67, 37, 0.5);
+} 
