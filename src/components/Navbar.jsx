@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import './Navbar.css'
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId)
     section.scrollIntoView({ behavior: 'smooth' })
+    setIsMenuOpen(false)
   }
 
   return (
@@ -14,7 +18,12 @@ function Navbar() {
           Traffi<span className="highlight-x">x</span>
         </h1>
       </div>
-      <div className="navbar-links">
+
+      <button className="mobile-menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+      </button>
+
+      <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
         <a href="#features" onClick={(e) => {
           e.preventDefault()
           scrollToSection('features')
