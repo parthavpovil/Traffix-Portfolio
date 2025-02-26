@@ -177,12 +177,11 @@
   border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.repo-link, .hosted-link {
+.repo-link, .hosted-link, .download-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(230, 67, 37, 0.1);
   border-radius: 4px;
   transition: all 0.3s ease;
 }
@@ -205,6 +204,15 @@
   transform: translateY(-2px);
 }
 
+.download-link {
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.download-link:hover {
+  background: rgba(40, 167, 69, 0.2);
+  transform: translateY(-2px);
+}
+
 /* Update the media queries */
 @media (max-width: 1024px) {
   .project-links {
@@ -212,7 +220,7 @@
     padding-left: 1rem;
   }
   
-  .repo-link, .hosted-link {
+  .repo-link, .hosted-link, .download-link {
     padding: 0.4rem 0.8rem;
   }
 }
@@ -278,7 +286,7 @@
     padding-top: 1rem;
   }
 
-  .repo-link, .hosted-link {
+  .repo-link, .hosted-link, .download-link {
     width: 100%;
     justify-content: center;
   }
@@ -315,7 +323,7 @@
     width: 100%;
   }
 
-  .repo-link, .hosted-link {
+  .repo-link, .hosted-link, .download-link {
     padding: 0.8rem;
     font-size: 1rem;
   }

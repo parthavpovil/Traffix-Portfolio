@@ -46,6 +46,9 @@ function Navbar() {
           <a href="https://traffix-admin-rosy.vercel.app/" target="_blank" rel="noopener noreferrer" className="hosted-link">
             <i className="fas fa-external-link-alt"></i> Admin Panel
           </a>
+          <a href="https://drive.google.com/file/d/1SyRCbdz7vVvyDTZyjomvb4aySrnaO4nH/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="download-link">
+            <i className="fas fa-download"></i> Download App
+          </a>
         </div>
       </div>
     </nav>
